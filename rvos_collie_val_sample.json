@@ -1,0 +1,375 @@
+{
+  "videos": {
+    "0f3f8b2b2f": {
+      "expressions": {
+        "0": {
+          "exp": "a black and white pointy lizard is sitting on brown rocks",
+          "exp_logic": "existsx (Lizard(x) and HasColor(x, black) and HasColor(x, white) and HasShape(x, pointy) and Sitting(x) and existsy (Rocks(y) and HasColor(y, brown) and OnTopOf(x, y)))",
+          "imp": "that little creature with the sharp features resting on those earthy stones",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Creature(x) ∧ Small(x) ∧ HasSharpFeatures(x) ∧ Resting(x) ∧ ∃y (Stones(y) ∧ Earthy(y) ∧ On(x, y)))",
+          "logic": "existsx (Creature(x) and Small(x) and HasSharpFeatures(x) and Resting(x) and existsy (Stones(y) and Earthy(y) and On(x, y)))",
+          "obj_id": "1"
+        },
+        "1": {
+          "exp": "a black and white lizard walking on the ground",
+          "exp_logic": "existsx (Lizard(x) and HasColor(x, black) and HasColor(x, white) and Walking(x) and OnGround(x))",
+          "imp": "that little guy making its way across the dirt",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Small(x) ∧ Moving(x) ∧ Across(x, dirt) ∧ Traversing(x))",
+          "logic": "existsx (Small(x) and Moving(x) and Across(x, dirt) and Traversing(x))",
+          "obj_id": "1"
+        }
+      },
+      "frames": [
+        "00000",
+        "00005",
+        "00010",
+        "00015",
+        "00020",
+        "00025",
+        "00030",
+        "00035",
+        "00040",
+        "00045",
+        "00050",
+        "00055",
+        "00060",
+        "00065",
+        "00070",
+        "00075",
+        "00080",
+        "00085",
+        "00090",
+        "00095",
+        "00100",
+        "00105",
+        "00110",
+        "00115",
+        "00120",
+        "00125",
+        "00130",
+        "00135",
+        "00140",
+        "00145",
+        "00150",
+        "00155",
+        "00160",
+        "00165",
+        "00170",
+        "00175"
+      ]
+    },
+    "0062f687f1": {
+      "expressions": {
+        "0": {
+          "exp": "a dog is with its puppies on the cloth",
+          "exp_logic": "existsx (Dog(x) and existsy (Puppies(y) and BelongsTo(y, x) and existsz (Cloth(z) and OnTopOf(x, z) and OnTopOf(y, z))))",
+          "imp": "the parent is resting with the little ones on some fabric",
+          "cls": "Contextual Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (Parent(x) ∧ Resting(x) ∧ ∃y (LittleOnes(y) ∧ With(x, y)) ∧ ∃z (Fabric(z) ∧ On(x, z)))",
+          "logic": "existsx (Parent(x) and Resting(x) and existsy (LittleOnes(y) and With(x, y)) and existsz (Fabric(z) and On(x, z)))",
+          "obj_id": "1"
+        },
+        "1": {
+          "exp": "a dog with puppies all around",
+          "exp_logic": "existsx (Dog(x) and existsy₁,y₂,...,yₙ (Puppy(y₁) and Puppy(y₂) and ... and Puppy(yₙ) and Around(y₁,x) and Around(y₂,x) and ... and Around(yₙ,x)))",
+          "imp": "the one surrounded by all the little ones",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (SurroundedBy(x, y) ∧ ∀y (Near(y, x) ⇒ Smaller(y, x)))",
+          "logic": "existsx (SurroundedBy(x, y) and forally (Near(y, x) implies Smaller(y, x)))",
+          "obj_id": "1"
+        },
+        "2": {
+          "exp": "a puppy dog on the left drinking milk from its mother",
+          "exp_logic": "existsx (Puppy(x) and Dog(x) and OnLeft(x) and existsy (Mother(y) and MotherOf(y, x) and DrinkingMilkFrom(x, y)))",
+          "imp": "the little one on the left getting fed by mom",
+          "cls": "Contextual Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (Little(x) ∧ OnLeft(x) ∧ ∃y (Mom(y) ∧ Feeding(y, x)))",
+          "logic": "existsx (Little(x) and OnLeft(x) and existsy (Mom(y) and Feeding(y, x)))",
+          "obj_id": "2"
+        },
+        "3": {
+          "exp": "a white puppy near the rear end of an adult dog",
+          "exp_logic": "existsx (Puppy(x) and HasColor(x, white) and existsy (Dog(y) and Adult(y) and Near(x, RearEnd(y))))",
+          "imp": "the little one hanging around behind the bigger one",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x ∃y (Small(x) ∧ Large(y) ∧ Behind(x, y) ∧ Near(x, y) ∧ SizeComparison(x, y, smaller))",
+          "logic": "existsx existsy (Small(x) and Large(y) and Behind(x, y) and Near(x, y) and SizeComparison(x, y, smaller))",
+          "obj_id": "2"
+        },
+        "4": {
+          "exp": "a puppy dog in front of dog s mouth goes in to the dog",
+          "exp_logic": "existsx (Puppy(x) and Dog(x) and existsy (Dog(y) and x !== y and InFrontOf(x, Mouth(y)) and GoesInto(x, y)))",
+          "imp": "the little one in front gets closer to the bigger one",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Small(x) ∧ InFront(x) ∧ ∃y (Bigger(y, x) ∧ GetsCloserTo(x, y)))",
+          "logic": "existsx (Small(x) and InFront(x) and existsy (Bigger(y, x) and GetsCloserTo(x, y)))",
+          "obj_id": "3"
+        },
+        "5": {
+          "exp": "a dark colored puppy near the adult dog s head",
+          "exp_logic": "existsx (Puppy(x) and HasColor(x, dark) and existsy (Dog(y) and Adult(y) and Near(x, Head(y))))",
+          "imp": "the little one hanging around close to the bigger one's face",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Small(x) ∧ ∃y (Large(y) ∧ Near(x, Face(y)) ∧ Hanging(x)))",
+          "logic": "existsx (Small(x) and existsy (Large(y) and Near(x, Face(y)) and Hanging(x)))",
+          "obj_id": "3"
+        }
+      },
+      "frames": [
+        "00000",
+        "00005",
+        "00010",
+        "00015",
+        "00020",
+        "00025",
+        "00030",
+        "00035",
+        "00040",
+        "00045",
+        "00050",
+        "00055",
+        "00060",
+        "00065",
+        "00070",
+        "00075",
+        "00080",
+        "00085",
+        "00090"
+      ]
+    },
+    "0782a6df7e": {
+      "expressions": {
+        "0": {
+          "exp": "a butterfly on a person s hand",
+          "exp_logic": "existsx (Butterfly(x) and existsy (Person(y) and HasHand(y) and OnTopOf(x, Hand(y))))",
+          "imp": "that little thing resting on someone's palm",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x ∃y (Small(x) ∧ Person(y) ∧ Resting(x, Palm(y)) ∧ On(x, Palm(y)))",
+          "logic": "existsx existsy (Small(x) and Person(y) and Resting(x, Palm(y)) and On(x, Palm(y)))",
+          "obj_id": "1"
+        },
+        "1": {
+          "exp": "a butterfly is sitting in the hands of a person",
+          "exp_logic": "existsx (Butterfly(x) and Sitting(x) and existsy (Person(y) and HasHands(y) and In(x, Hands(y))))",
+          "imp": "that little thing resting in someone's palms",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x ∃y (Small(x) ∧ Person(y) ∧ Resting(x) ∧ InPalms(x, y))",
+          "logic": "existsx existsy (Small(x) and Person(y) and Resting(x) and InPalms(x, y))",
+          "obj_id": "1"
+        },
+        "2": {
+          "exp": "a hand holding a butterfly",
+          "exp_logic": "existsx (Hand(x) and Holding(x, y) and existsy (Butterfly(y)))",
+          "imp": "someone gently cupping that delicate little fluttering thing",
+          "cls": "Contextual Reasoning, Higher-order Reasoning",
+          "logic_fop": "∃x (Person(x) ∧ Cupping(x, y) ∧ Gentle(Cupping(x, y)) ∧ Small(y) ∧ Delicate(y) ∧ Fluttering(y))",
+          "logic": "existsx (Person(x) and Cupping(x, y) and Gentle(Cupping(x, y)) and Small(y) and Delicate(y) and Fluttering(y))",
+          "obj_id": "2"
+        },
+        "3": {
+          "exp": "a hand is holding a butterfly at the edge of the fingers",
+          "exp_logic": "existsx (Hand(x) and existsy (Butterfly(y) and Holding(x, y) and AtEdgeOfFingers(y, x)))",
+          "imp": "someone's fingers are gently gripping that delicate little creature",
+          "cls": "Contextual Reasoning, Higher-order Reasoning",
+          "logic_fop": "∃x (Fingers(x) ∧ Gripping(x, y) ∧ Gentle(x) ∧ Creature(y) ∧ Delicate(y) ∧ Little(y))",
+          "logic": "existsx (Fingers(x) and Gripping(x, y) and Gentle(x) and Creature(y) and Delicate(y) and Little(y))",
+          "obj_id": "2"
+        }
+      },
+      "frames": [
+        "00000",
+        "00005",
+        "00010",
+        "00015",
+        "00020",
+        "00025",
+        "00030",
+        "00035",
+        "00040",
+        "00045",
+        "00050",
+        "00055",
+        "00060",
+        "00065",
+        "00070",
+        "00075",
+        "00080",
+        "00085",
+        "00090",
+        "00095",
+        "00100",
+        "00105",
+        "00110",
+        "00115",
+        "00120",
+        "00125",
+        "00130",
+        "00135",
+        "00140",
+        "00145"
+      ]
+    },
+    "13c3cea202": {
+      "expressions": {
+        "0": {
+          "exp": "a person holding a dog",
+          "exp_logic": "existsx (Person(x) and existsy (Dog(y) and Holding(x, y)))",
+          "imp": "someone with their pet",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Person(x) ∧ ∃y (Pet(y) ∧ BelongsTo(y, x) ∧ With(x, y)))",
+          "logic": "existsx (Person(x) and existsy (Pet(y) and BelongsTo(y, x) and With(x, y)))",
+          "obj_id": "1"
+        },
+        "1": {
+          "exp": "a child holding a puppy",
+          "exp_logic": "existsx (Child(x) and Holding(x, y) and existsy (Puppy(y)))",
+          "imp": "the little one with the furry friend in their arms",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Small(x) ∧ ∃y (Furry(y) ∧ Animal(y) ∧ Holding(x, y) ∧ InArms(x, y)))",
+          "logic": "existsx (Small(x) and existsy (Furry(y) and Animal(y) and Holding(x, y) and InArms(x, y)))",
+          "obj_id": "1"
+        },
+        "2": {
+          "exp": "a red dog",
+          "exp_logic": "existsx (Dog(x) and HasColor(x, red))",
+          "imp": "that furry friend over there",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Animal(x) ∧ HasFur(x) ∧ DistantFromSpeaker(x))",
+          "logic": "existsx (Animal(x) and HasFur(x) and DistantFromSpeaker(x))",
+          "obj_id": "2"
+        },
+        "3": {
+          "exp": "a yellow puppy",
+          "exp_logic": "existsx (Puppy(x) and HasColor(x, yellow))",
+          "imp": "that little furry friend",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Animal(x) ∧ Small(x) ∧ Furry(x))",
+          "logic": "existsx (Animal(x) and Small(x) and Furry(x))",
+          "obj_id": "2"
+        },
+        "4": {
+          "exp": "a red dog harness",
+          "exp_logic": "existsx (IsDogHarness(x) and HasColor(x, red))",
+          "imp": "that thing the pup wears when going for walks",
+          "cls": "Contextual Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (Collar(x) ∧ WornBy(x, pup) ∧ UsedDuring(x, walks))",
+          "logic": "existsx (Collar(x) and WornBy(x, pup) and UsedDuring(x, walks))",
+          "obj_id": "3"
+        },
+        "5": {
+          "exp": "the red harness on the puppy",
+          "exp_logic": "existsx (Harness(x) and HasColor(x, red) and existsy (Puppy(y) and WornBy(x, y)))",
+          "imp": "the thing the little one is wearing",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Wearing(little_one, x) ∧ Thing(x))",
+          "logic": "existsx (Wearing(little_one, x) and Thing(x))",
+          "obj_id": "3"
+        }
+      },
+      "frames": [
+        "00000",
+        "00005",
+        "00010",
+        "00015",
+        "00020",
+        "00025",
+        "00030",
+        "00035",
+        "00040",
+        "00045",
+        "00050",
+        "00055",
+        "00060",
+        "00065",
+        "00070",
+        "00075",
+        "00080",
+        "00085",
+        "00090",
+        "00095"
+      ]
+    },
+    "13ca7bbcfd": {
+      "expressions": {
+        "0": {
+          "exp": "the white toilet is behind the two sinks in the bathroom",
+          "exp_logic": "existsx (Toilet(x) and HasColor(x, white) and existsy₁,y₂ (Sink(y₁) and Sink(y₂) and y₁ !== y₂ and Behind(x, y₁) and Behind(x, y₂) and InRoom(x, bathroom) and InRoom(y₁, bathroom) and InRoom(y₂, bathroom)))",
+          "imp": "that thing you sit on is positioned back there behind the pair of wash basins",
+          "cls": "Contextual Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (Chair(x) ∧ Behind(x, y) ∧ ∃y (WashBasin(y) ∧ Count(y, 2)))",
+          "logic": "existsx (Chair(x) and Behind(x, y) and existsy (WashBasin(y) and Count(y, 2)))",
+          "obj_id": "1"
+        },
+        "1": {
+          "exp": "a white toilet",
+          "exp_logic": "existsx (Toilet(x) and HasColor(x, white))",
+          "imp": "that thing you sit on in the bathroom",
+          "cls": "Contextual Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (Toilet(x) ∧ InBathroom(x) ∧ SittableObject(x))",
+          "logic": "existsx (Toilet(x) and InBathroom(x) and SittableObject(x))",
+          "obj_id": "1"
+        },
+        "2": {
+          "exp": "a white bucket is between the tub and white toilet in the bathroom",
+          "exp_logic": "existsx (Bucket(x) and HasColor(x, white) and existsyexistsz (Tub(y) and Toilet(z) and HasColor(z, white) and Between(x, y, z) and InRoom(x, bathroom) and InRoom(y, bathroom) and InRoom(z, bathroom)))",
+          "imp": "that container sitting right in the middle of those two bathroom fixtures",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (Container(x) ∧ Sitting(x) ∧ existsyexistsz (BathroomFixture(y) ∧ BathroomFixture(z) ∧ y !== z ∧ Between(x, y, z) ∧ InMiddle(x, y, z)))",
+          "logic": "existsx (Container(x) and Sitting(x) and existsyexistsz (BathroomFixture(y) and BathroomFixture(z) and y !== z and Between(x, y, z) and InMiddle(x, y, z)))",
+          "obj_id": "2"
+        },
+        "3": {
+          "exp": "a white trash can",
+          "exp_logic": "existsx (TrashCan(x) and HasColor(x, white))",
+          "imp": "that thing where people throw their garbage",
+          "cls": "Contextual Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (Container(x) ∧ ReceivesGarbage(x) ∧ ∃y (Person(y) ∧ Throws(y, garbage, x)))",
+          "logic": "existsx (Container(x) and ReceivesGarbage(x) and existsy (Person(y) and Throws(y, garbage, x)))",
+          "obj_id": "2"
+        },
+        "4": {
+          "exp": "the white tissue is hanging on the wall between the toilet and sinks",
+          "exp_logic": "existsx (IsTissue(x) and HasColor(x, white) and Hanging(x) and OnWall(x) and existsyexistsz (IsToilet(y) and IsSink(z) and Between(x, y, z)))",
+          "imp": "that thing hanging on the wall between the toilet and sinks",
+          "cls": "Contextual Reasoning",
+          "logic_fop": "∃x (HangingOn(x, wall) ∧ Between(x, toilet, sinks))",
+          "logic": "existsx (HangingOn(x, wall) and Between(x, toilet, sinks))",
+          "obj_id": "3"
+        },
+        "5": {
+          "exp": "a roll of toilet paper",
+          "exp_logic": "existsx (IsToiletPaper(x) and HasShape(x, roll))",
+          "imp": "that thing you grab when you need it in the bathroom",
+          "cls": "Contextual Reasoning, Higher-order Reasoning, Semantic Transformation",
+          "logic_fop": "∃x (InBathroom(x) ∧ Grabbable(x) ∧ UsedWhenNeeded(x))",
+          "logic": "existsx (InBathroom(x) and Grabbable(x) and UsedWhenNeeded(x))",
+          "obj_id": "3"
+        }
+      },
+      "frames": [
+        "00000",
+        "00005",
+        "00010",
+        "00015",
+        "00020",
+        "00025",
+        "00030",
+        "00035",
+        "00040",
+        "00045",
+        "00050",
+        "00055",
+        "00060",
+        "00065",
+        "00070",
+        "00075",
+        "00080",
+        "00085",
+        "00090",
+        "00095"
+      ]
+    }
+  }
+}
