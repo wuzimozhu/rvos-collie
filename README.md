@@ -10,10 +10,10 @@ RVOS-CoLLIE is a novel dataset designed for **Referring Video Object Segmentatio
 
 ## 📁 Dataset Structure
 RVOS-CoLLIE/
-├── Annotations.zip # Segmentation masks in PNG format
-├── JPEGImages.zip # RGB frames of videos
-├── rvos_collie_val_sample.json # A small val subset with implicit queries
-└── README.md
+├── Annotations.zip # Segmentation masks in PNG format  
+├── JPEGImages.zip # RGB frames of videos  
+├── rvos_collie_val_sample.json # A small val subset with implicit queries  
+└── README.md  
 
 
 ## 🔍 File Description
